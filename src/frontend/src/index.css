@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Light Green + White Theme */
+    /* background = pure white */
+    --background: 1 0 0;
+    --foreground: 0.18 0.05 145;
+
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.05 145;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.05 145;
+
+    /* primary = #4CAF50 light green */
+    --primary: 0.59 0.17 145;
+    --primary-foreground: 1 0 0;
+
+    --secondary: 0.94 0.04 145;
+    --secondary-foreground: 0.22 0.08 145;
+
+    --muted: 0.95 0.02 145;
+    --muted-foreground: 0.48 0.05 145;
+
+    --accent: 0.9 0.07 145;
+    --accent-foreground: 0.2 0.09 145;
+
+    /* destructive = red, used ONLY for delete buttons */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.88 0.04 145;
+    --input: 0.92 0.02 145;
+    --ring: 0.59 0.17 145;
+
+    --chart-1: 0.59 0.17 145;
+    --chart-2: 0.65 0.14 160;
+    --chart-3: 0.72 0.12 130;
+    --chart-4: 0.8 0.1 120;
+    --chart-5: 0.45 0.18 150;
+
+    --sidebar: 0.97 0.03 145;
+    --sidebar-foreground: 0.18 0.05 145;
+    --sidebar-primary: 0.59 0.17 145;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.91 0.06 145;
+    --sidebar-accent-foreground: 0.22 0.09 145;
+    --sidebar-border: 0.88 0.04 145;
+    --sidebar-ring: 0.59 0.17 145;
+
+    /* Custom semantic tokens */
+    --success: 0.59 0.17 145;
+    --success-light: 0.93 0.07 145;
+    --warning: 0.78 0.18 85;
+    --warning-light: 0.96 0.1 85;
+    /* danger stays red for OUT movements only */
+    --danger: 0.577 0.245 27.325;
+    --danger-light: 0.96 0.06 27.325;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-success {
+    color: oklch(var(--success));
+  }
+  .bg-success-light {
+    background-color: oklch(var(--success-light));
+  }
+  .text-warning {
+    color: oklch(var(--warning));
+  }
+  .bg-warning-light {
+    background-color: oklch(var(--warning-light));
+  }
+  .text-danger {
+    color: oklch(var(--danger));
+  }
+  .bg-danger-light {
+    background-color: oklch(var(--danger-light));
+  }
+  .border-success {
+    border-color: oklch(var(--success));
+  }
+  .border-warning {
+    border-color: oklch(var(--warning));
+  }
+  .border-danger {
+    border-color: oklch(var(--danger));
+  }
+}
